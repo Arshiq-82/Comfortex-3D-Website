@@ -18,3 +18,120 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 @media(max-width:900px){body{cursor:auto}.cursor-dot,.cursor-ring{display:none}.navlinks{position:fixed;inset:72px 14px auto 14px;padding:28px;background:rgba(8,8,8,.94);border:1px solid var(--line);backdrop-filter:blur(22px);display:none;flex-direction:column;gap:0;box-shadow:0 25px 80px #000}.menu-open .navlinks{display:flex}.navlinks a{padding:18px 4px;border-bottom:1px solid rgba(216,180,95,.1)}.menu{display:block}.menu-open{overflow:hidden}.container{width:min(var(--max),calc(100% - 28px))}.split,.contact-grid{grid-template-columns:1fr;gap:40px}.section-head{position:static}.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(2n){border-right:0}.pillar{border-bottom:1px solid var(--line)}.process{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.gallery .tile.tall{grid-row:auto;min-height:520px}.cta-inner{display:block}.cta-inner .btn{margin-top:30px}.footer-grid{grid-template-columns:1fr 1fr}.hud{display:none}.page-hero{min-height:70svh}.image-stage:before{inset:5%}.manifesto-grid{grid-template-columns:1fr;gap:35px}.manifesto-side{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}}
 @media(max-width:560px){h1{font-size:3.5rem}.section{padding:105px 0}.hero-sub{font-size:16px}.cards,.testimonial-grid{grid-template-columns:1fr}.process{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.subfooter{display:block}.image-stage{min-height:520px;height:75vh}.stage-copy{left:6%;bottom:7%}.brand img{width:100px}.brand span{font-size:10px}.hero-brand-name{font-size:12px}.page-hero p{font-size:17px}.card{padding:34px}.pillar{padding:30px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important}.image-stage img{transform:none!important}.marquee-track,.preloader img{animation:none!important}}
+.eyebrow {
+    font-family: "Space Mono", monospace;
+    font-size: 21px !important;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+/* Make the small numbered labels readable */
+.card-num {
+    font-size: 16px !important;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+}
+
+/* Image labels */
+.tile-label {
+    font-size: 15px !important;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+}
+
+/* Process numbers */
+.process-item b {
+    font-size: 15px !important;
+}
+
+/* Process titles */
+.process-item strong {
+    font-size: 21px !important;
+}
+
+/* Footer headings */
+.footer-title {
+    font-size: 15px !important;
+}
+
+/* Footer links */
+.footer-link {
+    font-size: 16px !important;
+}
+
+/* Normal paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Cards */
+.card strong {
+    font-size: 18px !important;
+}
+
+.card p {
+    font-size: 17px !important;
+    line-height: 1.75;
+}
+
+/* Pillar headings */
+.pillar strong {
+    font-size: 18px !important;
+}
+
+.pillar p {
+    font-size: 16px !important;
+    line-height: 1.75;
+}
+
+/* Contact information */
+.contact-box a {
+    font-size: 24px !important;
+}
+
+/* Buttons */
+.btn {
+    font-size: 14px !important;
+    padding: 17px 24px;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .eyebrow {
+        font-size: 17px !important;
+        letter-spacing: 0.11em;
+    }
+
+    .card-num {
+        font-size: 14px !important;
+    }
+
+    .tile-label {
+        font-size: 13px !important;
+    }
+
+    .process-item strong {
+        font-size: 19px !important;
+    }
+
+    .footer-title {
+        font-size: 14px !important;
+    }
+
+    .footer-link {
+        font-size: 15px !important;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .contact-box a {
+        font-size: 20px !important;
+    }
+}
