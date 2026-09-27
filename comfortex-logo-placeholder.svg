@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160">
-<rect width="640" height="160" fill="#050505"/>
-<g fill="none" stroke="#C8A15A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-<path d="M75 125V55c0-20 16-36 36-36h52c20 0 36 16 36 36v70"/>
-<path d="M85 75h80M100 125V95h70v30"/>
-</g>
-<text x="235" y="103" fill="#C8A15A" font-family="Georgia,serif" font-size="54" letter-spacing="7">COMFORTEX</text>
-</svg>
