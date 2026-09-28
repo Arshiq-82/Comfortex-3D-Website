@@ -1,0 +1,9 @@
+COMFORTEX REAL IMAGES FIX
+
+The original comfortex-01.png etc. files in the GitHub repository were empty/invalid image files.
+This package contains real PNG image files and updated HTML references with a cache-busting version query.
+
+Replace the website files in your GitHub repository with the contents of this package.
+Keep the folder structure exactly as provided.
+
+After uploading/committing, wait for GitHub Pages to deploy, then hard refresh comfortex.in with Ctrl+Shift+R.
