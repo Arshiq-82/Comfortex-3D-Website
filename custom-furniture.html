@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Furniture | Comfortex Interiors</title>
+  <meta name="description" content="Custom furniture by Comfortex Interiors. Made-to-measure sofas, beds, dining furniture, wardrobes and statement pieces manufactured for your space.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root{
+      --gold:#c9a45c;
+      --gold2:#e4c985;
+      --black:#0b0b0b;
+      --dark:#111;
+      --muted:#a7a7a7;
+      --line:rgba(255,255,255,.1);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--black);color:#fff;font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .cf-page{overflow:hidden}
+    .cf-nav{
+      position:sticky;top:0;z-index:1000;
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+      padding:18px 5%;background:rgba(8,8,8,.92);
+      backdrop-filter:blur(14px);border-bottom:1px solid var(--line)
+    }
+    .cf-logo{font-size:22px;font-weight:800;letter-spacing:2px}
+    .cf-nav-links{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:flex-end}
+    .cf-nav-links a{font-size:13px;color:#ddd;transition:.25s}
+    .cf-nav-links a:hover,.cf-nav-links a.active{color:var(--gold2)}
+    .bulk-nav-btn{
+      padding:11px 17px;border:1px solid var(--gold);
+      border-radius:999px;color:#fff!important;
+      box-shadow:0 0 14px rgba(201,164,92,.35),0 0 28px rgba(201,164,92,.14);
+      animation:glow 2.2s infinite alternate
+    }
+    @keyframes glow{from{box-shadow:0 0 10px rgba(201,164,92,.25)}to{box-shadow:0 0 24px rgba(201,164,92,.65),0 0 42px rgba(201,164,92,.2)}}
+    .cf-hero{
+      min-height:78vh;display:grid;place-items:center;text-align:center;
+      padding:100px 7%;position:relative;
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.92)),
+        url("assets/images/photo/Comfortex-Luxury-Furniture-Showcase.png") center/cover;
+    }
+    .cf-hero-content{max-width:950px}
+    .eyebrow{color:var(--gold2);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:18px}
+    .cf-hero h1{font-size:clamp(42px,7vw,86px);line-height:.98;margin:0 0 24px;font-weight:800}
+    .cf-hero h1 span{color:var(--gold2)}
+    .cf-hero p{max-width:720px;margin:0 auto 32px;color:#ddd;font-size:18px;line-height:1.7}
+    .cf-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:15px 24px;border-radius:999px;background:var(--gold);
+      color:#080808;font-weight:800;transition:.25s
+    }
+    .cf-btn:hover{transform:translateY(-2px);background:var(--gold2)}
+    .cf-btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;margin-left:10px}
+    .cf-section{padding:100px 7%;max-width:1400px;margin:auto}
+    .cf-heading{text-align:center;max-width:800px;margin:0 auto 55px}
+    .cf-heading h2{font-size:clamp(32px,4vw,54px);margin:0 0 16px}
+    .cf-heading p{color:#aaa;line-height:1.7}
+    .cf-intro{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+    .cf-intro h2{font-size:clamp(32px,4vw,58px);margin:0 0 20px}
+    .cf-intro p{color:#aaa;line-height:1.8;font-size:16px}
+    .cf-image{overflow:hidden;border-radius:22px;border:1px solid var(--line);background:#151515}
+    .cf-image img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;transition:.5s}
+    .cf-image:hover img{transform:scale(1.035)}
+    .cf-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+    .cf-tag{border:1px solid rgba(201,164,92,.45);color:#ddd;padding:9px 13px;border-radius:999px;font-size:12px}
+    .cf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cf-card{background:#121212;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+    .cf-card img{width:100%;height:245px;object-fit:cover;display:block}
+    .cf-card-body{padding:23px}
+    .cf-card h3{margin:0 0 9px;font-size:21px}
+    .cf-card p{margin:0;color:#999;line-height:1.65;font-size:14px}
+    .cf-process{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .cf-step{padding:25px 18px;background:#121212;border:1px solid var(--line);border-radius:18px}
+    .cf-step-no{color:var(--gold2);font-size:12px;letter-spacing:2px;margin-bottom:14px}
+    .cf-step h3{font-size:16px;margin:0 0 9px}
+    .cf-step p{font-size:13px;line-height:1.55;color:#888;margin:0}
+    .cf-showcase{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .cf-showcase .cf-image img{aspect-ratio:16/10}
+    .cf-bulk{
+      margin:20px 7% 100px;padding:70px 7%;border-radius:28px;
+      background:linear-gradient(135deg,#181818,#0c0c0c);
+      border:1px solid rgba(201,164,92,.35);text-align:center;
+      box-shadow:0 0 50px rgba(201,164,92,.08)
+    }
+    .cf-bulk h2{font-size:clamp(32px,5vw,62px);margin:0 0 18px}
+    .cf-bulk p{max-width:760px;margin:0 auto 28px;color:#aaa;line-height:1.7}
+    .cf-footer{border-top:1px solid var(--line);padding:45px 7%;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;color:#888}
+    .cf-footer strong{color:#fff}
+    .cf-footer-links{display:flex;gap:20px;flex-wrap:wrap}
+    .cf-footer-links a:hover{color:var(--gold2)}
+    @media(max-width:1000px){
+      .cf-nav{align-items:flex-start;flex-direction:column}
+      .cf-nav-links{justify-content:flex-start}
+      .cf-intro{grid-template-columns:1fr}
+      .cf-grid{grid-template-columns:1fr 1fr}
+      .cf-process{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:650px){
+      .cf-nav{padding:15px 5%}
+      .cf-nav-links{gap:14px}
+      .cf-nav-links a{font-size:12px}
+      .cf-hero{min-height:70vh;padding:80px 6%}
+      .cf-hero p{font-size:15px}
+      .cf-btn.secondary{margin:10px 0 0}
+      .cf-section{padding:70px 6%}
+      .cf-grid,.cf-showcase{grid-template-columns:1fr}
+      .cf-process{grid-template-columns:1fr 1fr}
+      .cf-bulk{margin:0 5% 70px;padding:50px 7%}
+    }
+  </style>
+</head>
+<body>
+<div class="cf-page">
+
+  <nav class="cf-nav">
+    <a class="cf-logo" href="index.html">COMFORTEX</a>
+    <div class="cf-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="custom-furniture.html">Custom Furniture</a>
+      <a href="our-works.html">Our Works</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <a class="bulk-nav-btn" href="https://wa.me/917506611820?text=Hi%20Comfortex,%20I%20am%20interested%20in%20bulk%20furniture%20manufacturing%20at%20factory%20prices." target="_blank" rel="noopener">Bulk Enquiry ↗</a>
+    </div>
+  </nav>
+
+  <header class="cf-hero">
+    <div class="cf-hero-content">
+      <div class="eyebrow">Custom Furniture · Direct Manufacturing</div>
+      <h1>Furniture made <span>for your space.</span></h1>
+      <p>From one statement sofa to complete furniture packages, Comfortex creates made-to-measure pieces with the proportions, materials, finishes and detailing your project demands.</p>
+      <a class="cf-btn" href="https://wa.me/917506611820?text=Hi%20Comfortex,%20I%20want%20to%20discuss%20custom%20furniture." target="_blank" rel="noopener">Start Your Furniture Project ↗</a>
+      <a class="cf-btn secondary" href="our-works.html">View Our Works</a>
+    </div>
+  </header>
+
+  <section class="cf-section">
+    <div class="cf-intro">
+      <div>
+        <div class="eyebrow">Designed. Manufactured. Delivered.</div>
+        <h2>Designed for you.<br><span style="color:var(--gold2)">Made by Comfortex.</span></h2>
+        <p>Custom furniture is built around the way your space actually works. We can develop furniture around your dimensions, layout, preferred materials, colours and finish direction.</p>
+        <p>Whether you need a single bespoke piece, furniture for a home, or a larger quantity for a hospitality or commercial project, the same manufacturing-led approach can be applied from concept through delivery.</p>
+        <div class="cf-tags">
+          <span class="cf-tag">Made to Measure</span>
+          <span class="cf-tag">Custom Finishes</span>
+          <span class="cf-tag">Direct Manufacturing</span>
+          <span class="cf-tag">Project Quantities</span>
+        </div>
+      </div>
+      <div class="cf-image">
+        <img src="assets/images/photo/Comfortex-Luxury-Furniture-Showcase.png" alt="Comfortex luxury custom furniture showcase">
+      </div>
+    </div>
+  </section>
+
+  <section class="cf-section">
+    <div class="cf-heading">
+      <div class="eyebrow">What We Make</div>
+      <h2>Custom furniture across the project.</h2>
+      <p>Choose the furniture type, dimensions and finish direction that fit your project. We can work from a reference image, drawing, concept, dimensions or design brief.</p>
+    </div>
+    <div class="cf-grid">
+      <article class="cf-card">
+        <img src="assets/images/photo/Comfortex-Luxury-Furniture-Showcase.png" alt="Custom sofas">
+        <div class="cf-card-body"><h3>Sofas & Seating</h3><p>Custom proportions, upholstery, fabrics, colours and configurations for living rooms, lounges and hospitality spaces.</p></div>
+      </article>
+      <article class="cf-card">
+        <img src="assets/images/photo/Comfortex-High-Quantity-Furniture-Showcase.png" alt="Custom beds and bedroom furniture">
+        <div class="cf-card-body"><h3>Beds & Bedroom Furniture</h3><p>Made-to-measure beds, headboards and supporting pieces designed around room dimensions and the desired look.</p></div>
+      </article>
+      <article class="cf-card">
+        <img src="assets/images/photo/Comfortex-Bulk-Furniture-Production.png" alt="Custom dining furniture">
+        <div class="cf-card-body"><h3>Dining Tables & Chairs</h3><p>Dining furniture developed for homes, restaurants, hotels, offices and other project environments.</p></div>
+      </article>
+      <article class="cf-card">
+        <img src="assets/images/photo/Comfortex-Furniture--Better-Pricing.png" alt="Custom furniture manufacturing">
+        <div class="cf-card-body"><h3>Wardrobes & Storage</h3><p>Furniture planned around available wall space, storage requirements, finish preferences and project dimensions.</p></div>
+      </article>
+      <article class="cf-card">
+        <img src="assets/images/photo/Comfortex-Bulk-Furniture-Solutions.png" alt="Custom statement furniture">
+        <div class="cf-card-body"><h3>TV Units & Statement Pieces</h3><p>Distinctive furniture pieces that bring a specific architectural or interior design direction into the room.</p></div>
+      </article>
+      <article class="cf-card">
+        <img src="assets/images/photo/Complete-Hotel-Transformation-Showcase.png" alt="Hospitality furniture">
+        <div class="cf-card-body"><h3>Hospitality & Project Furniture</h3><p>Furniture packages for hotels, serviced spaces, commercial environments and projects requiring repeatable quantities.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cf-section">
+    <div class="cf-heading">
+      <div class="eyebrow">Our Process</div>
+      <h2>From idea to finished furniture.</h2>
+      <p>A straightforward workflow keeps the design direction, specifications and manufacturing requirements aligned.</p>
+    </div>
+    <div class="cf-process">
+      <div class="cf-step"><div class="cf-step-no">01</div><h3>Brief</h3><p>Share your space, requirements, reference images and quantity.</p></div>
+      <div class="cf-step"><div class="cf-step-no">02</div><h3>Design</h3><p>We establish proportions, construction direction and detailing.</p></div>
+      <div class="cf-step"><div class="cf-step-no">03</div><h3>Material & Finish</h3><p>Select upholstery, laminates, veneers, colours and finishes.</p></div>
+      <div class="cf-step"><div class="cf-step-no">04</div><h3>Approval</h3><p>Confirm specifications and the final manufacturing direction.</p></div>
+      <div class="cf-step"><div class="cf-step-no">05</div><h3>Manufacture</h3><p>The approved furniture moves into production.</p></div>
+      <div class="cf-step"><div class="cf-step-no">06</div><h3>Delivery</h3><p>Furniture is prepared for delivery and project installation.</p></div>
+    </div>
+  </section>
+
+  <section class="cf-section">
+    <div class="cf-heading">
+      <div class="eyebrow">Manufacturing Showcase</div>
+      <h2>Built for individual pieces and project quantities.</h2>
+    </div>
+    <div class="cf-showcase">
+      <div class="cf-image"><img src="assets/images/photo/Comfortex-Bulk-Furniture-Production.png" alt="Comfortex furniture production"></div>
+      <div class="cf-image"><img src="assets/images/photo/Comfortex-Bulk-Furniture-Solutions.png" alt="Comfortex bulk furniture solutions"></div>
+      <div class="cf-image"><img src="assets/images/photo/Comfortex-Furniture--Better-Pricing.png" alt="Comfortex furniture pricing and manufacturing"></div>
+      <div class="cf-image"><img src="assets/images/photo/Complete-Hotel-Transformation-Showcase.png" alt="Comfortex complete hotel furniture project"></div>
+    </div>
+  </section>
+
+  <section class="cf-bulk">
+    <div class="eyebrow">Bulk Furniture Manufacturing</div>
+    <h2>Need furniture in quantity?</h2>
+    <p>Talk to Comfortex about project quantities, hospitality furniture, commercial requirements and factory-direct manufacturing. Share your quantity and requirements to start the discussion.</p>
+    <a class="cf-btn" href="https://wa.me/917506611820?text=Hi%20Comfortex, I am interested in bulk furniture manufacturing at factory prices." target="_blank" rel="noopener">Enquire for Bulk Manufacturing ↗</a>
+  </section>
+
+  <footer class="cf-footer">
+    <div><strong>COMFORTEX INTERIORS</strong><br>Furniture · Manufacturing · Interiors</div>
+    <div class="cf-footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="custom-furniture.html">Custom Furniture</a>
+      <a href="our-works.html">Our Works</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
